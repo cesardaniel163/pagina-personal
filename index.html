@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MajokeliSystem | Tecnología e Innovación</title>
+    <title>César Daniel | Portafolio Personal</title>
     
     <!-- Meta Etiquetas SEO -->
-    <meta name="description" content="Jorge Cantero - Técnico en informática. Especialista en IA, automatización y desarrollo de sistemas.">
-    <meta property="og:title" content="MajokeliSystem | Jorge Cantero">
-    <meta property="og:description" content="Creación de sistemas basados en IA, automatización y tecnología para tu negocio.">
+    <meta name="description" content="César Daniel - Estudiante de Ingeniería de Software.">
+    <meta property="og:title" content="César Daniel | Portafolio">
+    <meta property="og:description" content="Desarrollo de software y tecnología.">
     <meta property="og:type" content="website">
     
     <style>
@@ -18,9 +18,9 @@
             --panel: rgba(11, 23, 38, 0.6);
             --text: #edf5ff;
             --muted: #aabbd0;
-            --primary: #8b5cf6;
-            --secondary: #2dd4bf;
-            --accent: #67e8f9;
+            --primary: #3b82f6; /* Cambié el color a un azul más tecnológico */
+            --secondary: #60a5fa;
+            --accent: #93c5fd;
             --line: rgba(148, 163, 184, 0.15);
             --glass: rgba(7, 17, 31, 0.7);
         }
@@ -30,8 +30,8 @@
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: radial-gradient(circle at 15% 50%, rgba(45, 212, 191, 0.08), transparent 25%),
-                        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%),
+            background: radial-gradient(circle at 15% 50%, rgba(96, 165, 250, 0.08), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%),
                         var(--bg);
             background-attachment: fixed;
             color: var(--text);
@@ -46,7 +46,6 @@
             margin: 0 auto;
         }
 
-        /* Nav Glassmorphism */
         header {
             position: fixed;
             top: 0;
@@ -56,7 +55,6 @@
             -webkit-backdrop-filter: blur(12px);
             background: var(--glass);
             border-bottom: 1px solid var(--line);
-            transition: all 0.3s ease;
         }
 
         .nav {
@@ -84,86 +82,30 @@
             font-size: 1.2rem;
             position: relative;
         }
-        
-        .brand-mark::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .brand:hover .brand-mark::after { opacity: 1; }
 
-        .nav-links {
-            display: flex; gap: 32px;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 2px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
-
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: var(--text); }
-        .nav-links a:hover::after { width: 100%; }
 
-        /* Buttons */
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
             padding: 1rem 1.75rem;
             border-radius: 14px;
             font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
+            transition: all 0.3s;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--secondary), var(--primary));
             color: white;
             border: none;
-            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
-        }
-
-        .btn-primary::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            z-index: -1; transition: opacity 0.3s ease; opacity: 0;
         }
         
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(45, 212, 191, 0.3);
-        }
-        .btn-primary:hover::before { opacity: 1; }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--line);
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.2);
-            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
 
-        /* Hero */
         .hero {
             padding: 150px 0 100px;
             min-height: 100vh;
@@ -173,89 +115,60 @@
         .eyebrow {
             display: inline-block; margin-bottom: 24px; padding: 6px 16px;
             border-radius: 20px;
-            background: rgba(45, 212, 191, 0.1);
-            border: 1px solid rgba(45, 212, 191, 0.2);
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             color: var(--secondary);
             font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;
-            animation: fadeInDown 0.8s ease-out;
         }
 
         h1 {
             font-size: clamp(3rem, 6vw, 6rem);
             line-height: 1.1; margin: 0 0 16px 0;
-            animation: fadeInLeft 1s ease-out;
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #fff, #a78bfa, var(--secondary));
+            background: linear-gradient(135deg, #fff, #93c5fd, var(--secondary));
             -webkit-background-clip: text; background-clip: text; color: transparent;
         }
 
         .hero-copy {
             max-width: 600px; font-size: 1.15rem; color: var(--muted);
             margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .hero-actions { animation: fadeInUp 1s ease-out 0.4s both; display: flex; gap: 16px; flex-wrap: wrap;}
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap;}
 
-        /* Cards & Grids */
         .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 3rem; text-align: center; }
         .section-title span { color: var(--secondary); }
 
         section { padding: 100px 0; }
 
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
         .card {
             background: var(--panel);
             border: 1px solid var(--line);
             border-radius: 24px; padding: 40px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s;
             backdrop-filter: blur(10px);
         }
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: rgba(139, 92, 246, 0.4);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.4);
         }
 
         .icon-box {
             width: 60px; height: 60px;
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(45,212,191,0.1), rgba(139,92,246,0.1));
+            background: linear-gradient(135deg, rgba(96,165,250,0.1), rgba(59,130,246,0.1));
             display: grid; place-items: center; font-size: 1.8rem; margin-bottom: 24px;
-            border: 1px solid rgba(255,255,255,0.05);
         }
-
-        /* Floating WhatsApp */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px;
-            width: 60px; height: 60px;
-            background: #25D366; border-radius: 50%;
-            display: grid; place-items: center; font-size: 30px; color: white;
-            box-shadow: 0 10px 20px rgba(37,211,102,0.3);
-            z-index: 1000;
-            animation: pulse 2s infinite;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
-
-        /* Reveal on scroll */
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero { padding-top: 120px; text-align: center; }
             .hero-actions { justify-content: center; }
-            .card { padding: 30px; }
         }
     </style>
 </head>
@@ -264,13 +177,12 @@
     <header>
         <div class="container nav">
             <a href="#" class="brand">
-                <div class="brand-mark">M</div>
-                MajokeliSystem
+                <div class="brand-mark">C</div>
+                César Daniel
             </a>
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#servicios">Servicios</a>
                 <a href="#proyectos">Proyectos</a>
             </div>
         </div>
@@ -279,34 +191,28 @@
     <main>
         <section id="inicio" class="hero">
             <div class="container">
-                <span class="eyebrow">Soluciones Tecnológicas</span>
-                <h1>Hola, soy <br><span class="gradient-text">Jorge Cantero</span></h1>
-                <p class="hero-copy">Técnico en informática y estudiante de Análisis de Sistemas. Transformo ideas en sistemas inteligentes, automatizados y seguros para potenciar tu negocio.</p>
+                <span class="eyebrow">Ingeniería de Software</span>
+                <h1>Hola, soy <br><span class="gradient-text">César Daniel</span></h1>
+                <p class="hero-copy">Estudiante de Ingeniería de Software apasionado por la tecnología, el desarrollo de sistemas y el aprendizaje continuo. Aquí comparto un poco de mi perfil.</p>
                 <div class="hero-actions">
-                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="https://wa.me/54973448931" class="btn btn-secondary">Hablemos</a>
+                    <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
                 </div>
             </div>
         </section>
 
-        <section id="servicios">
+        <section id="sobre-mi">
             <div class="container">
-                <h2 class="section-title reveal">Mis <span>Especialidades</span></h2>
-                <div class="grid-3">
-                    <article class="card reveal">
-                        <div class="icon-box">🤖</div>
-                        <h3>IA y Automatización</h3>
-                        <p style="color: var(--muted)">Implementación de herramientas inteligentes para optimizar procesos repetitivos, reduciendo tiempos y mejorando la rentabilidad.</p>
-                    </article>
-                    <article class="card reveal" style="transition-delay: 0.1s">
+                <h2 class="section-title">Sobre <span>Mí</span></h2>
+                <div class="grid-2">
+                    <article class="card">
                         <div class="icon-box">💻</div>
-                        <h3>Desarrollo de Sistemas</h3>
-                        <p style="color: var(--muted)">Creación de software a medida. Sistemas web, gestión de inventario y agendas adaptadas a las necesidades reales de tu empresa.</p>
+                        <h3>Desarrollo de Software</h3>
+                        <p style="color: var(--muted)">Me enfoco en aprender y aplicar las mejores prácticas para construir sistemas eficientes y escalables.</p>
                     </article>
-                    <article class="card reveal" style="transition-delay: 0.2s">
-                        <div class="icon-box">📹</div>
-                        <h3>Infraestructura y CCTV</h3>
-                        <p style="color: var(--muted)">Planificación, instalación y mantenimiento de redes y cámaras de seguridad para proteger y controlar tu negocio 24/7.</p>
+                    <article class="card">
+                        <div class="icon-box">📚</div>
+                        <h3>Aprendizaje Continuo</h3>
+                        <p style="color: var(--muted)">Siempre buscando aprender nuevas tecnologías, como Git, GitHub y herramientas de despliegue como Vercel.</p>
                     </article>
                 </div>
             </div>
@@ -314,54 +220,29 @@
 
         <section id="proyectos" style="background: rgba(255,255,255,0.02)">
             <div class="container">
-                <h2 class="section-title reveal">Casos de <span>Éxito</span></h2>
+                <h2 class="section-title">Mis <span>Proyectos</span></h2>
                 <div class="grid-2">
-                    <article class="card reveal">
-                        <h3 style="font-size: 1.5rem; margin-top:0">💅 Beauty Studio</h3>
-                        <p style="color: var(--secondary); font-weight: bold; margin-bottom: 20px">Sistema de Agendamiento Automático</p>
-                        <p style="color: var(--muted)">Desarrollo de una plataforma que permite a los clientes reservar turnos 24/7 sin intervención humana, reduciendo cancelaciones mediante recordatorios automáticos.</p>
+                    <article class="card">
+                        <h3 style="font-size: 1.5rem; margin-top:0">🛠️ Proyecto 1</h3>
+                        <p style="color: var(--secondary); font-weight: bold; margin-bottom: 20px">Aplicación Web de Gestión</p>
+                        <p style="color: var(--muted)">Desarrollo de una interfaz para la gestión de usuarios y productos.</p>
                     </article>
-                    <article class="card reveal" style="transition-delay: 0.2s">
-                        <h3 style="font-size: 1.5rem; margin-top:0">☕ Espacio Gourmet</h3>
-                        <p style="color: var(--primary); font-weight: bold; margin-bottom: 20px">Gestión de Inventario y Pedidos</p>
-                        <p style="color: var(--muted)">Implementación de un punto de venta a medida que controla el stock en tiempo real y agiliza la comunicación entre los meseros y la cocina.</p>
+                    <article class="card">
+                        <h3 style="font-size: 1.5rem; margin-top:0">🚀 Proyecto 2</h3>
+                        <p style="color: var(--primary); font-weight: bold; margin-bottom: 20px">Despliegue en la nube</p>
+                        <p style="color: var(--muted)">Implementación de CI/CD utilizando Git, GitHub y Vercel para sitios web estáticos.</p>
                     </article>
                 </div>
-            </div>
-        </section>
-
-        <section id="sobre-mi">
-            <div class="container reveal text-center" style="text-align: center; max-width: 800px; margin: 0 auto">
-                <div class="icon-box" style="margin: 0 auto 30px auto; background: linear-gradient(135deg, #a78bfa, #2dd4bf)">🚀</div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px">¿Listo para innovar?</h2>
-                <p style="font-size: 1.2rem; color: var(--muted); margin-bottom: 40px">Mi objetivo es aportar valor a través de la tecnología. Ya sea una consulta técnica o el desarrollo de un sistema completo, estoy a un mensaje de distancia.</p>
-                <a href="https://wa.me/54973448931" class="btn btn-primary" style="padding: 1.2rem 2.5rem; font-size: 1.1rem">Contactarme por WhatsApp</a>
             </div>
         </section>
     </main>
 
     <footer style="text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--muted)">
-        <p>© 2026 MajokeliSystem. Todos los derechos reservados.</p>
+        <p>© 2026 César Daniel. Todos los derechos reservados.</p>
+        <p style="margin-top: 10px">
+            <a href="https://github.com/cesardaniel163" target="_blank" style="color: var(--secondary)">Mi GitHub</a>
+        </p>
     </footer>
 
-    <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/54973448931" class="whatsapp-float" target="_blank" rel="noopener">✆</a>
-
-    <!-- Script para animaciones al scrollear -->
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on load
-    </script>
 </body>
 </html>
